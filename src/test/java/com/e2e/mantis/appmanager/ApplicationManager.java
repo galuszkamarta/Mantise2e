@@ -44,4 +44,14 @@ public class ApplicationManager {
     driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     driver.get(properties.getProperty("web.baseUrl"));
   }
+
+  public void stop() {driver.quit();}
+
+  public HttpSession newSession() {
+    return new HttpSession(this);
+  }
+
+  public String getProperty(String key) {
+    return properties.getProperty(key);
+  }
 }
