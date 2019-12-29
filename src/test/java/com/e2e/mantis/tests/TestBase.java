@@ -13,6 +13,7 @@ import java.io.IOException;
 /**
  * Created by m on 2019-10-22.
  */
+
 public class TestBase {
 
 
@@ -30,4 +31,5 @@ public class TestBase {
     app.ftp().restore("config_inc.php.bak", "config_inc.php");
     app.stop();
   }
+
 }
